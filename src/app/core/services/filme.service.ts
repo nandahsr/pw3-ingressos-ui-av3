@@ -10,7 +10,7 @@ import { Filme } from '../models';
 export class FilmeService {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:8080/filmes';
-
+  
   listarEmCartaz(): Observable<Filme[]> {
     return this.http.get<Filme[]>(`${this.apiUrl}/em-cartaz`);
   }
